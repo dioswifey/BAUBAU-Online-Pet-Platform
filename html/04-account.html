@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BAU CLUB Member Login</title>
+    <!-- Load Lucide Icons (We still need the script for the icons) -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    
+    <!-- Link External CSS - CORRECTED PATH: ../css/account.css -->
+    <link rel="stylesheet" href="../css/account.css">
+</head>
+<body class="page-layout">
+
+    <!-- Container Card -->
+    <div class="login-container">
+
+        <!-- Left Side: Image/Branding (Creative Element) -->
+        <div class="login-branding">
+            <h2 class="branding-title">Welcome Back, Pet Lover!</h2>
+            <p class="branding-subtitle">
+                Access your personalized dashboard, manage subscriptions, and explore exclusive club benefits.
+            </p>
+            <div class="branding-image" style="background-image: url('../images/PetCam.png');"></div>
+            
+            <a href="index.html" class="branding-link">
+                &larr; Back to Home
+            </a>
+        </div>
+
+        <!-- Right Side: Login Form -->
+        <div class="login-form-area">
+            <h2 class="form-title">Member Login</h2>
+            
+            <form id="loginForm" class="login-form">
+                
+                <!-- Username Input -->
+                <div class="input-group">
+                    <label for="username">Username</label>
+                    <input type="text" id="username" name="username" placeholder="Enter your username" required class="form-input">
+                </div>
+
+                <!-- Password Input -->
+                <div class="input-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password" placeholder="Enter your password" required class="form-input">
+                </div>
+
+                <!-- Remember Me & Forgot Password -->
+                <div class="form-options">
+                    <div class="remember-me">
+                        <input type="checkbox" id="check" class="form-checkbox">
+                        <label for="check">Remember Me</label>
+                    </div>
+                    <a href="#" class="forgot-link">Forgot Password?</a>
+                </div>
+
+                <!-- Login Button -->
+                <button type="submit" id="loginButton" class="btn-login">
+                    Member Login
+                </button>
+            </form>
+
+            <!-- Message Box for JS feedback -->
+            <div id="messageBox" class="message-box message-box--hidden"></div>
+
+            <p class="new-member-text">
+                New to BAU Club? 
+                <a href="join_today.html" class="join-link">Join Today</a>
+            </p>
+        </div>
+    </div>
+
+    <!-- Link External JavaScript - CORRECTED PATH: ../javascript/account.js -->
+    <script src="../javascript/account.js"></script>
+    <script>
+        // Initialize Lucide Icons on load
+        if (typeof lucide !== 'undefined') {
+            lucide.createIcons();
+        }
+    </script>
+</body>
+</html>
