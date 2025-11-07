@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact Us</title>
+  <link rel="stylesheet" href="../css/contact.css" />
+</head>
+<body>
+  <section class="contact-section">
+    <h1>Contact Us</h1> 
+    <p>We’re here to help! Choose a category below or start a live chat.</p>
+
+    <div class="contact-container">
+      <div class="contact-list" onclick="showInfo('care')">
+        <div class="icon">💬</div>
+        <span>Customer Care</span>
+      </div>
+
+      <div class="contact-list" onclick="showInfo('shipping')">
+        <div class="icon">🚚</div>
+        <span>Shipping Info</span>
+      </div>
+
+      <div class="contact-list" onclick="showInfo('exchange')">
+        <div class="icon">♻️</div>
+        <span>Exchange & Return</span>
+      </div>
+
+      <div class="contact-list" onclick="showInfo('promo')">
+        <div class="icon">🎁</div>
+        <span>Promotion</span>
+      </div>
+    </div>
+
+    <div id="info-box" class="info-box hidden">
+      <p id="info-text"></p>
+    </div>
+
+    <button type="button" class="chat-btn" onclick="startChat()">💬 Start Live Chat</button>
+  </section>
+
+  <script src="../javascript/contact.js"></script>
+</body>
+</html>

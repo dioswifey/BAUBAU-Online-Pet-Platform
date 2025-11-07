@@ -1,0 +1,24 @@
+/* Custom font and colors setup (Note: Tailwind utility classes handle most of this) */
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #f8fafc; 
+}
+
+/* Custom properties for consistency, though Tailwind classes are used directly in HTML */
+.text-primary { 
+    color: #4f46e5; 
+}
+
+.bg-primary { 
+    background-color: #4f46e5; 
+}
+
+.hover\:bg-primary-dark:hover { 
+    background-color: #4338ca; 
+} 
+
+/* Utility for icons loaded via Lucide */
+.feature-icon {
+    width: 24px;
+    height: 24px;
+}

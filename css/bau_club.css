@@ -1,0 +1,195 @@
+/* --- CSS VARIABLES for easy Theming --- */
+:root {
+    --primary-color: #4f46e5;       /* Indigo */
+    --accent-color: #10b981;        /* Emerald/Green */
+    --premium-color: #ef4444;       /* Red */
+    --bg-color: #f3f4f6;
+    --card-bg-color: #ffffff;
+    --main-font: 'Inter', sans-serif; 
+}
+
+/* --- Base Styles & Typography --- */
+body {
+    font-family: var(--main-font);
+    background-color: var(--bg-color);
+    margin: 0;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.main-header {
+    background-color: var(--card-bg-color);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    padding: 1.5rem 0;
+}
+
+.main-header h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--primary-color);
+    margin: 0;
+}
+
+.main-content {
+    padding: 3rem 0 5rem;
+}
+
+.subtitle {
+    font-size: 1.125rem;
+    color: #6b7280;
+    margin-bottom: 0.5rem;
+}
+
+.main-content h1 {
+    font-size: 3rem;
+    font-weight: 800;
+    color: #1f2937;
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+}
+
+.tagline {
+    font-size: 1.25rem;
+    color: #4b5563;
+    margin-bottom: 3rem;
+}
+
+.summary-text {
+    font-size: 1.125rem;
+    color: #4b5563;
+    font-weight: 600;
+    margin-top: 3rem;
+    text-align: center;
+}
+
+/* --- Membership Grid Layout --- */
+.bauclub-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+}
+
+/* --- Individual Service Card Styles --- */
+.service {
+    background-color: var(--card-bg-color);
+    padding: 2.5rem;
+    border-radius: 1rem;
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.05);
+    text-align: center;
+    
+    /* 3D Transform Setup */
+    perspective: 1000px;
+    transform-style: preserve-3d;
+    transition: transform 0.15s ease-out, box-shadow 0.3s ease-out; /* Note the fast transform transition for smooth hover */
+    
+    /* Used for the button placement */
+    display: flex;
+    flex-direction: column;
+}
+
+/* --- 3D Hover Effect --- */
+.service:hover {
+    transform: translateY(-5px); /* Lift slightly on hover */
+    box-shadow: 0 30px 40px -5px rgba(0, 0, 0, 0.15), 0 10px 15px -6px rgba(0, 0, 0, 0.08);
+}
+
+/* Class applied by JavaScript on click/tap */
+.service.is-active {
+    transform: scale(1.05) rotateX(0deg) rotateY(0deg);
+    box-shadow: 0 0 0 4px var(--primary-color); /* Highlight border on activation */
+}
+
+
+/* Icons */
+.service i {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+.service--core i { color: var(--primary-color); }
+.service--elite i { color: var(--accent-color); }
+.service--premium i { color: var(--premium-color); }
+
+/* Headings */
+.service h3 {
+    font-size: 1.75rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+}
+
+/* Service Details List */
+.service-details {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-align: left;
+    min-height: 200px; /* Ensure visual length consistency */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    flex-grow: 1; /* Push button to the bottom */
+}
+
+.service-details span {
+    display: block; /* Make each span a separate line item */
+    padding: 0.5rem 0;
+    border-bottom: 1px solid #f3f4f6;
+}
+
+.service-details .price {
+    font-size: 2rem;
+    font-weight: 800;
+    margin-bottom: 1rem;
+    border-bottom: none;
+}
+
+.service--core .price { color: var(--primary-color); }
+.service--elite .price { color: var(--accent-color); }
+.service--premium .price { color: var(--premium-color); }
+
+.benefit--disabled {
+    color: #9ca3af; /* Gray out disabled features */
+    text-decoration: line-through;
+}
+
+/* Buttons */
+.btn {
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    font-weight: 700;
+    border: none;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    transition: background-color 0.2s, transform 0.1s;
+    margin-top: auto; /* Aligns button to the bottom */
+}
+
+.btn--core {
+    background-color: #e5e7eb;
+    color: #6b7280;
+    cursor: not-allowed;
+}
+
+.btn--elite {
+    background-color: var(--accent-color);
+    color: white;
+}
+.btn--elite:hover {
+    background-color: #059669;
+}
+
+.btn--premium {
+    background-color: var(--premium-color);
+    color: white;
+}
+.btn--premium:hover {
+    background-color: #dc2626;
+}

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BAU CLUB Membership</title>
+    <!-- Load Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40B7M03pM0n/u3r0z6v5L/u/k2/aF55d0jI4T8tP+b4P2Z6K9z8w7t8H7t3j5a8/c3e8A1g0m4g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+    <!-- Link External CSS - Must be named bau_club.css in the same folder -->
+    <link rel="stylesheet" href="/css/bau_club.css">
+</head>
+<body>
+    <header class="main-header">
+        <div class="container">
+            <h1>BAU CLUB</h1>
+        </div>
+    </header>
+    
+    <main class="main-content">
+        <div class="container text-center">
+            <p class="subtitle">Introducing our premium membership program</p>
+            <h1>WELCOME TO BAU CLUB</h1>
+            <h2 class="tagline">We go beyond just a membership</h2>
+        </div>
+
+        <!-- Membership Cards Container -->
+        <div class="bauclub-list container">
+            
+            <!-- Core Tier -->
+            <div class="service service--core" data-tier="core">
+                <i class="fas fa-check"></i>
+                <h3>Core</h3>
+                <p class="service-details">
+                    <span class="price">No Additional Fee</span>
+                    <span class="benefit">Welcome Giftbox</span>
+                    <span class="benefit benefit--disabled">No Monthly Services</span>
+                    <span class="benefit benefit--disabled">No Vet Access</span>
+                </p>
+                <button class="btn btn--core">Included</button>
+            </div>
+
+            <!-- Elite Tier -->
+            <div class="service service--elite" data-tier="elite">
+                <i class="fas fa-check-circle"></i>
+                <h3>Elite</h3>
+                <p class="service-details">
+                    <span class="price">$9 / month</span>
+                    <span class="benefit">Welcome Giftbox</span>
+                    <span class="benefit">Welcome Petcam Gift</span>
+                    <span class="benefit">Once a month Pet-Sitter Service</span>
+                    <span class="benefit benefit--disabled">No Vet Access</span>
+                </p>
+                <button class="btn btn--elite">Choose Elite</button>
+            </div>
+
+            <!-- Premium Tier -->
+            <div class="service service--premium" data-tier="premium">
+                <i class="fas fa-paw"></i>
+                <h3>Premium</h3>
+                <p class="service-details">
+                    <span class="price">$21 / month</span>
+                    <span class="benefit">Random Giftbox Every Month</span>
+                    <span class="benefit">Free Petcam with Cloud Storage</span>
+                    <span class="benefit">Three times a month Pet-Sitter Service</span>
+                    <span class="benefit">Online Access to Certified Vet</span>
+                </p>
+                <button class="btn btn--premium">Go Premium</button>
+            </div>
+        </div>
+        
+        <p class="summary-text container">Just one membership, many more benefits</p>
+    </main>
+
+    <!-- Link External JavaScript - Must be named bau_club.js in the same folder -->
+    <script src="/javascript/bau_club.js"></script>
+</body>
+</html>

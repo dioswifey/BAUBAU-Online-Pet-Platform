@@ -1,0 +1,25 @@
+/* ROOT VARIABLES for easy customization */
+:root {
+    /* Change the primary font here (e.g., 'Roboto', sans-serif) */
+      font-family: "Momo Trust Display", sans-serif;
+    
+    /* Change the main background color here */
+    --background-color: #f7f9fc; 
+
+    --font-weight: 800;
+    
+    /* Change the primary text color (used for strong highlights) */
+    --main-color: #3926c5; /* Current: Dark Indigo */
+}
+
+/* Apply Font and Background Color */
+body {
+    font-family: var(--main-font);
+    background-color: var(--background-color);
+    font-weight: var(--font-weight);
+}
+
+/* Custom class used in HTML to apply the variable color */
+.text-main-color {
+    color: var(--main-color);
+}

@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Join Paw-tastic Delivery Today</title>
+    <!-- Load Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Load Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    
+    <!-- Link External CSS -->
+    <link rel="stylesheet" href="join_today.css">
+    
+    <!-- Tailwind Configuration (Must remain here to configure the CDN script) -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'primary': '#4f46e5',
+                        'primary-dark': '#4338ca',
+                        'secondary': '#f97316', /* Orange 500 */
+                    },
+                }
+            }
+        }
+    </script>
+</head>
+<body class="min-h-screen antialiased flex items-center justify-center p-4">
+
+    <div class="max-w-6xl w-full bg-white rounded-2xl shadow-2xl overflow-hidden my-8">
+        <div class="lg:grid lg:grid-cols-2">
+
+            <!-- Left Column: Benefits and Features -->
+            <div class="p-8 md:p-12 bg-primary text-white flex flex-col justify-between">
+                <div>
+                    <h1 class="text-4xl md:text-5xl font-extrabold mb-4 leading-tight">
+                        Join Today and Get <span class="text-secondary">20% Off!</span>
+                    </h1>
+                    <p class="text-lg mb-8 opacity-90">
+                        The ultimate platform for pet parents. Everything your dog, cat, or critter needs, delivered right to your door.
+                    </p>
+
+                    <!-- Features Section -->
+                    <div class="mb-10">
+                        <h3 class="text-2xl font-bold mb-5 border-b border-white/30 pb-3">Key Features</h3>
+                        <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 features-list">
+                            
+                            <div class="flex items-center space-x-3 features-list-item">
+                                <i data-lucide="paw-print" class="feature-icon"></i>
+                                <span class="F_Dog font-semibold">Dog Products</span>
+                            </div>
+
+                            <div class="flex items-center space-x-3 features-list-item">
+                                <i data-lucide="cat" class="feature-icon"></i>
+                                <span class="F_Cat font-semibold">Cat Essentials</span>
+                            </div>
+
+                            <div class="flex items-center space-x-3 features-list-item">
+                                <i data-lucide="pill" class="feature-icon"></i>
+                                <span class="F_Pharmacy font-semibold">Pet Pharmacy</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Services Section -->
+                    <div class="dropdown-1-right">
+                        <h3 class="text-2xl font-bold mb-5 border-b border-white/30 pb-3">Member Services</h3>
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 dropdown-services">
+                            
+                            <div class="flex items-center space-x-3 dropdown-service">
+                                <i data-lucide="life-buoy" class="feature-icon"></i>
+                                <div class="dropdown-service-item">
+                                    <span>24/7 Customer Center</span>
+                                </div>
+                            </div>
+
+                            <div class="flex items-center space-x-3 dropdown-service">
+                                <i data-lucide="graduation-cap" class="feature-icon"></i>
+                                <div class="dropdown-service-item">
+                                    <span>Certified Dog Training</span>
+                                </div>
+                            </div>
+
+                            <div class="flex items-center space-x-3 dropdown-service">
+                                <i data-lucide="user-check" class="feature-icon"></i>
+                                <div class="dropdown-service-item">
+                                    <span>Verified Pet Sitter Network</span>
+                                </div>
+                            </div>
+
+                            <div class="flex items-center space-x-3 dropdown-service">
+                                <i data-lucide="credit-card" class="feature-icon"></i>
+                                <div class="dropdown-service-item">
+                                    <span>BAU PAY (In-App Wallet)</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Footer Call to Action -->
+                <div class="mt-8 pt-4 border-t border-white/30 text-sm opacity-80">
+                    Your pet's happiness starts here.
+                </div>
+            </div>
+
+            <!-- Right Column: Registration Form -->
+            <div class="p-8 md:p-12">
+                <h2 class="text-3xl font-bold text-gray-900 mb-6">Create Your Account</h2>
+                <form id="registrationForm" onsubmit="handleRegistration(event)" class="space-y-5">
+                    
+                    <!-- Full Name -->
+                    <div>
+                        <label for="fullName" class="block text-sm font-medium text-gray-700">Full Name</label>
+                        <input type="text" id="fullName" name="fullName" required placeholder="John Doe"
+                               class="mt-1 w-full p-3 border border-gray-300 rounded-lg focus:ring-primary focus:border-primary transition duration-150">
+                    </div>
+
+                    <!-- Email -->
+                    <div>
+                        <label for="email" class="block text-sm font-medium text-gray-700">Email Address</label>
+                        <input type="email" id="email" name="email" required placeholder="name@example.com"
+                               class="mt-1 w-full p-3 border border-gray-300 rounded-lg focus:ring-primary focus:border-primary transition duration-150">
+                    </div>
+
+                    <!-- Password -->
+                    <div>
+                        <label for="password" class="block text-sm font-medium text-gray-700">Password</label>
+                        <input type="password" id="password" name="password" required minlength="8" placeholder="Must be at least 8 characters"
+                               class="mt-1 w-full p-3 border border-gray-300 rounded-lg focus:ring-primary focus:border-primary transition duration-150">
+                        <p class="text-xs text-gray-500 mt-1">We recommend a strong, unique password.</p>
+                    </div>
+
+                    <!-- Pet Type Selection -->
+                    <div>
+                        <span class="block text-sm font-medium text-gray-700 mb-2">I am a parent to a:</span>
+                        <div class="flex space-x-4">
+                            <label class="inline-flex items-center">
+                                <input type="radio" name="petType" value="Dog" required class="form-radio text-primary h-4 w-4">
+                                <span class="ml-2 text-gray-700">Dog</span>
+                            </label>
+                            <label class="inline-flex items-center">
+                                <input type="radio" name="petType" value="Cat" class="form-radio text-primary h-4 w-4">
+                                <span class="ml-2 text-gray-700">Cat</span>
+                            </label>
+                            <label class="inline-flex items-center">
+                                <input type="radio" name="petType" value="Other" class="form-radio text-primary h-4 w-4">
+                                <span class="ml-2 text-gray-700">Other</span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <!-- Terms Checkbox -->
+                    <div class="flex items-start">
+                        <input id="terms" name="terms" type="checkbox" required
+                               class="h-4 w-4 rounded border-gray-300 text-primary focus:ring-primary mt-1">
+                        <label for="terms" class="ml-2 text-sm text-gray-600">
+                            I agree to the <a href="#" class="text-primary hover:underline font-medium">Terms and Conditions</a> and Privacy Policy.
+                        </label>
+                    </div>
+
+                    <!-- Submission Button -->
+                    <button type="submit" id="submitButton"
+                            class="w-full py-3 px-4 rounded-lg text-white font-semibold bg-secondary hover:bg-orange-600 transition duration-200 shadow-md transform active:scale-[0.98]">
+                        Complete Registration
+                    </button>
+
+                    <!-- Message Box for Success/Error -->
+                    <div id="messageBox" class="p-3 rounded-lg text-sm hidden" role="alert"></div>
+
+                </form>
+            </div>
+            
+        </div>
+    </div>
+
+    <!-- Link External JavaScript -->
+    <script src="join_today.js"></script>
+</body>
+</html>

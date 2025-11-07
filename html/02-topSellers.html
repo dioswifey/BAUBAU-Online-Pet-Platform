@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pet Top Sellers Categories</title>
+    <!-- Load Tailwind CSS for utility classes -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Load Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40B7M03pM0n/u3r0z6v5L/u/k2/aF55d0jI4T8tP+b4P2Z6K9z8w7t8H7t3j5a8/c3e8A1g0m4g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+    <!-- Link External CSS - Must be named top_sellers.css in the same folder -->
+    <link rel="stylesheet" href="/css/top_sellers.css">
+
+    <!-- NO more tailwind.config script! -->
+</head>
+<body class="p-4 md:p-8 min-h-screen">
+
+    <div class="max-w-6xl mx-auto mt-10">
+        <h2 class="text-3xl font-extrabold text-gray-900 mb-8 text-center">Top Pet Seller Categories</h2>
+
+        <!-- Content Grid: Always visible -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 bg-white shadow-2xl rounded-xl p-4 md:p-8">
+
+            <!-- Food Category -->
+            <div class="TopSellers-item p-4 bg-gray-50 rounded-lg transition-transform hover:shadow-md hover:scale-[1.02]">
+                <i class="fas fa-seedling text-4xl text-green-600 mb-3 block"></i>
+                <h3 class="text-xl font-bold mb-3 text-gray-800">Food</h3>
+                <p class="text-sm text-gray-600 mb-2">
+                    <strong class="text-main-color">Purina Pro Plan:</strong> High-quality nutrition for their dogs and cats. Backed by extensive scientific research and favored by many veterinarians.
+                </p>
+                <p class="text-sm text-gray-600 mb-2">
+                    <strong class="text-main-color">Ziwi Peak:</strong> A premium New Zealand-based pet food company, has a reputation for its commitment to high-quality and biologically appropriate nutrition.
+                </p>
+                <p class="text-sm text-gray-600">
+                    <strong class="text-main-color">Hill's Science Diet:</strong> At the core of Hill's philosophy is a deep commitment to a science-led approach. The company employs over 220 veterinarians and Ph.D. nutritionists.
+                </p>
+            </div>
+
+            <!-- Treats Category -->
+            <div class="TopSellers-item p-4 bg-gray-50 rounded-lg transition-transform hover:shadow-md hover:scale-[1.02]">
+                <i class="fas fa-candy-cane text-4xl text-red-500 mb-3 block"></i>
+                <h3 class="text-xl font-bold mb-3 text-gray-800">Treats</h3>
+                <p class="text-sm text-gray-600 mb-2">
+                    <strong class="text-main-color">Greenies:</strong> A simple and enjoyable way to improve canine oral hygiene, these treats offer a range of benefits that are recognized by both veterinarians and pet owners.
+                </p>
+                <p class="text-sm text-gray-600 mb-2">
+                    <strong class="text-main-color">Blue Buffalo:</strong> A primary benefit across the Blue Buffalo treat portfolio is the commitment to using real meat, such as deboned chicken, beef, or salmon, as the first ingredient.
+                </p>
+                <p class="text-sm text-gray-600">
+                    <strong class="text-main-color">Milk Bone:</strong> The crunchy texture of Milk-Bone biscuits can help reduce tartar and freshen breath, fortified with vitamins and minerals.
+                </p>
+            </div>
+
+            <!-- Toys Category -->
+            <div class="TopSellers-item p-4 bg-gray-50 rounded-lg transition-transform hover:shadow-md hover:scale-[1.02]">
+                <i class="fas fa-bone text-4xl text-amber-500 mb-3 block"></i>
+                <h3 class="text-xl font-bold mb-3 text-gray-800">Toys</h3>
+                <p class="text-sm text-gray-600 mb-2">
+                    <strong class="text-main-color">Nylabone:</strong> Promoting dental health, satisfying natural chewing instincts, and helping to redirect destructive chewing behavior.
+                </p>
+                <p class="text-sm text-gray-600 mb-2">
+                    <strong class="text-main-color">Kong:</strong> Kong toys offer numerous benefits for dogs, including mental stimulation, physical exercise, and dental health support. They can also help manage destructive chewing behaviors.
+                </p>
+                <p class="text-sm text-gray-600">
+                    <strong class="text-main-color">Playology:</strong> Playology toys are infused with all-natural scents, which are released as the dog chews, keeping them engaged up to seven times longer than unscented toys.
+                </p>
+            </div>
+
+            <!-- Cleaning & Potty Category -->
+            <div class="TopSellers-item p-4 bg-gray-50 rounded-lg transition-transform hover:shadow-md hover:scale-[1.02]">
+                <i class="fas fa-dog text-4xl text-blue-400 mb-3 block"></i>
+                <h3 class="text-xl font-bold mb-3 text-gray-800">Cleaning & Potty</h3>
+                <p class="text-sm text-gray-600 mb-2">
+                    <strong class="text-main-color">Arm & Hammer:</strong> Arm & Hammer cat litter, especially those with baking soda, is formulated to neutralize odors, including ammonia, which is a common component of cat urine.
+                </p>
+                <p class="text-sm text-gray-600 mb-2">
+                    <strong class="text-main-color">OdoBan:</strong> OdoBan No Rinse Neutral pH Floor Cleaner is safe for use around pets and won't harm floor finishes.
+                </p>
+                <p class="text-sm text-gray-600">
+                    <strong class="text-main-color">Nature's Miracle:</strong> Excellent for enzymatic stain and odor removal, breaking down pet messes naturally.
+                </p>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- The JS file is linked but empty -->
+    <script src="top_sellers.js"></script>
+</body>
+</html>
