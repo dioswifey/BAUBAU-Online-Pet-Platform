@@ -1,0 +1,233 @@
+/* --- CSS VARIABLES for easy Theming --- */
+:root {
+    --primary-color: #4f46e5;       /* Indigo */
+    --primary-hover: #4338ca;       /* Darker Indigo */
+    --background-color: #f8fafc;    /* Light background */
+    --card-bg-color: #ffffff;
+    --text-color-primary: #1f2937;
+    --text-color-secondary: #6b7280;
+    --form-border: #d1d5db;
+    --main-font: 'Inter', sans-serif; 
+}
+
+/* --- Base Layout & Typography --- */
+body {
+    font-family: var(--main-font);
+    background-color: var(--background-color);
+    margin: 0;
+    line-height: 1.5;
+}
+
+.page-layout {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+}
+
+.login-container {
+    max-width: 768px; /* Approx max-w-4xl */
+    width: 100%;
+    background-color: var(--card-bg-color);
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25); /* shadow-2xl */
+    border-radius: 1rem; /* rounded-2xl */
+    overflow: hidden;
+    display: flex;
+    flex-direction: column; /* Stacked on mobile */
+}
+
+/* --- Left Side: Branding/Image --- */
+.login-branding {
+    padding: 2.5rem;
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(135deg, var(--primary-color) 0%, #6366f1 100%);
+    color: white;
+    display: none; /* Hidden by default (mobile) */
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+}
+
+.branding-title {
+    font-size: 1.875rem; /* 3xl */
+    font-weight: 800;
+    margin-bottom: 1rem;
+    z-index: 10;
+}
+
+.branding-subtitle {
+    font-size: 1.125rem; /* lg */
+    color: #e0e7ff; /* light indigo */
+    margin-bottom: 2rem;
+    z-index: 10;
+}
+
+.branding-image {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0.2;
+    background-size: cover;
+    background-position: center;
+}
+
+.branding-link {
+    font-size: 0.875rem; /* text-sm */
+    color: white;
+    text-decoration: underline;
+    transition: color 0.15s;
+    z-index: 10;
+}
+.branding-link:hover {
+    color: #e0e7ff;
+}
+
+/* --- Right Side: Form Area --- */
+.login-form-area {
+    padding: 2rem; /* p-8 */
+}
+
+.form-title {
+    font-size: 1.875rem; /* 3xl */
+    font-weight: 700;
+    color: var(--text-color-primary);
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.login-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem; /* space-y-6 */
+}
+
+/* --- Form Elements --- */
+.input-group label {
+    font-size: 0.875rem; /* text-sm */
+    font-weight: 500;
+    color: #374151; /* gray-700 */
+    display: block;
+    margin-bottom: 0.25rem;
+}
+
+.form-input {
+    width: 100%;
+    padding: 0.5rem 1rem; /* px-4 py-2 */
+    border: 1px solid var(--form-border);
+    border-radius: 0.5rem; /* rounded-lg */
+    transition: border-color 0.15s, box-shadow 0.15s;
+}
+
+.form-input:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 1px var(--primary-color), 0 0 0 4px rgba(79, 70, 229, 0.2); /* Custom focus ring */
+}
+
+/* Remember Me & Forgot Password Layout */
+.form-options {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.remember-me {
+    display: flex;
+    align-items: center;
+    font-size: 0.875rem;
+    color: var(--text-color-secondary);
+}
+
+.form-checkbox {
+    /* Style for basic checkbox */
+    height: 1rem;
+    width: 1rem;
+    margin-right: 0.5rem;
+    border: 1px solid var(--form-border);
+    border-radius: 0.25rem;
+    color: var(--primary-color);
+}
+
+.forgot-link {
+    font-size: 0.875rem;
+    color: var(--primary-color);
+    text-decoration: none;
+    transition: color 0.15s;
+}
+.forgot-link:hover {
+    color: var(--primary-hover);
+}
+
+/* Login Button */
+.btn-login {
+    width: 100%;
+    padding: 0.625rem 1rem; /* py-2.5 px-4 */
+    background-color: var(--primary-color);
+    color: white;
+    font-weight: 600;
+    border: none;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    transition: background-color 0.15s;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1);
+}
+.btn-login:hover {
+    background-color: var(--primary-hover);
+}
+
+/* Message Box */
+.message-box {
+    margin-top: 1rem;
+    padding: 0.75rem;
+    border-radius: 0.5rem;
+    text-align: center;
+    font-size: 0.875rem;
+}
+
+.message-box--hidden {
+    display: none;
+}
+
+/* New Member Text */
+.new-member-text {
+    margin-top: 1.5rem;
+    text-align: center;
+    font-size: 0.875rem;
+    color: #6b7280;
+}
+
+.join-link {
+    color: var(--primary-color);
+    font-weight: 600;
+    text-decoration: none;
+    transition: color 0.15s;
+}
+.join-link:hover {
+    color: var(--primary-hover);
+}
+
+/* --- Media Queries (Responsiveness) --- */
+@media (min-width: 768px) {
+    /* Display the left branding section on desktop */
+    .login-branding {
+        display: flex;
+        width: 50%;
+        padding: 2.5rem 2rem;
+    }
+
+    /* Set up the two-column layout */
+    .login-container {
+        flex-direction: row;
+    }
+
+    /* Form area takes remaining width on desktop */
+    .login-form-area {
+        width: 50%;
+        padding: 3rem;
+    }
+}
